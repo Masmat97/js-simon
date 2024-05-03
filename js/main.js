@@ -1,11 +1,4 @@
-// function getRandomInt(max) {
-//     return Math.floor(Math.random() * max);
-//   }
-//   console.log(getRandomInt(10));
-//   console.log(getRandomInt(10));
-//   console.log(getRandomInt(10));
-//   console.log(getRandomInt(10));
-//   console.log(getRandomInt(10));
+
 
   function casuali() {
     n = parseInt(document.getElementById("quanti").value);
