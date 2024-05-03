@@ -1,5 +1,5 @@
 
-
+// Funzione numeri casuali
   function casuali() {
     n = parseInt(document.getElementById("quanti").value);
     if (n > 0 && n <= 100) {
@@ -14,6 +14,15 @@
      document.getElementById("casuali").innerHTML = "Numeri generati: " + str;
      } 
      else {
-        document.getElementById("casuali").innerHTML = "Inserisci un numero maggiore di 0 e inferiore a 100";
+        document.getElementById("casuali").innerHTML = "";
      }
+  }
+// Timer
+
+
+  setTimeout (myFunction, 3000);
+
+  function myFunction() {
+    alert("21")
+    clearInterval("casuali");
   }
