@@ -1,28 +1,21 @@
 
-// Funzione numeri casuali
-  function casuali() {
-    n = parseInt(document.getElementById("quanti").value);
-    if (n > 0 && n <= 100) {
-      str = "";
-      for (i = 0; i < n; i++) {
-           num = Math.round(Math.random()*100 + 1);
-           if (i > 0) {
-              str += ", ";
-           }
-           str += num;
-       }
-     document.getElementById("casuali").innerHTML = "Numeri generati: " + str;
-     } 
-     else {
-        document.getElementById("casuali").innerHTML = "";
-     }
-  }
-// Timer
+function generateRandomNumber() {
+  return Math.floor(Math.random() * 100) + 1;
+}
 
+let randomNumbers = [];
 
-  setTimeout (myFunction, 3000);
+for (let i = 0; i < 5; i++) {
+  let randomNumber = generateRandomNumber();
+  randomNumbers.push(randomNumber);
+  console.log(randomNumber);  // Stampa in console
+}
 
-  function myFunction() {
-    alert("21")
-    clearInterval("casuali");
-  }
+const numbersDiv = document.getElementById('numbers');
+
+numbersDiv.textContent = 'Numeri generati: ' + randomNumbers.join(', ');
+
+setTimeout(() => {
+  // Nasconde i numeri dalla pagina dopo 3 secondi
+  numbersDiv.style.display = 'none';
+}, 3000);
