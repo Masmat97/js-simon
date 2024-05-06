@@ -31,4 +31,8 @@ setTimeout(() => {
 
   // Stampa l'array dei numeri dell'utente in console
   console.log("Numeri inseriti dall'utente:", userNumbers);
+
+  let matches = randomNumbers.filter(value => userNumbers.includes(value));
+  console.log("Numeri indovinati:", matches.length > 0 ? matches.join(', ') : "Nessuno");
+
 }, 3000);
